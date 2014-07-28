@@ -61,4 +61,7 @@ SUBDIRS += devtree.d
 SUBDIRS += sbe.d
 SUBDIRS += gpio.d
 
+SUBDIRS += console.d lpc.d
+
+
 include ${ROOTPATH}/config.mk

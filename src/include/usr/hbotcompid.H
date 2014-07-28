@@ -318,6 +318,15 @@ const compId_t SBE_COMP_ID = 0x2200;
 const char SBE_COMP_NAME[] = "sbe";
 //@}
 
+/** @name LPC
+ * Low Pin Count Bus
+ */
+//@{
+const compId_t LPC_COMP_ID = 0x4000;
+const char LPC_COMP_NAME[] = "lpc";
+//@}
+
+
 /** @name GPIO
  * General Purpose IO device
  */

@@ -112,6 +112,8 @@ BASE_MODULES += initservice
 BASE_MODULES += secureboot_base
 BASE_MODULES += pnor
 BASE_MODULES += vfs
+BASE_MODULES += console
+BASE_MODULES += lpc
 
 EXTENDED_MODULES += targeting
 EXTENDED_MODULES += ecmddatabuffer

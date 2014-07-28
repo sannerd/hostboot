@@ -69,6 +69,18 @@ const TaskInfo g_exttaskinfolist[]   =   {
         },
 
         /**
+         * @brief  SP-less console
+         */
+        {
+            "libconsole.so",                            // taskname
+            NULL,                                       // no ptr to fnct
+            {
+                START_TASK,                             // task type
+                BASE_IMAGE,                             // Base Module
+            }
+        },
+
+        /**
          * @brief   FSI Device Driver
          */
 
