@@ -5,7 +5,7 @@
 /*                                                                        */
 /* OpenPOWER HostBoot Project                                             */
 /*                                                                        */
-/* Contributors Listed Below - COPYRIGHT 2012,2016                        */
+/* Contributors Listed Below - COPYRIGHT 2012,2017                        */
 /* [+] International Business Machines Corp.                              */
 /*                                                                        */
 /*                                                                        */
@@ -90,7 +90,7 @@ TARGETING::TargetService& targetService()
 
 TARG_TD_t g_trac_targeting = {0};
 #ifdef __HOSTBOOT_MODULE
-TRAC_INIT(&g_trac_targeting, "TARG", 2*KILOBYTE, TRACE::BUFFER_SLOW);
+TRAC_INIT(&g_trac_targeting, "TARG", 32*KILOBYTE, TRACE::BUFFER_SLOW);
 #else
 TRAC_INIT(&g_trac_targeting, "TARG", 4096);
 #endif

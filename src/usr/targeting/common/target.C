@@ -38,6 +38,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <algorithm>
+#include <console/consoleif.H>
+
 
 // This component
 #include <targeting/common/attributes.H>
@@ -201,6 +203,18 @@ bool Target::_trySetAttr(
     (void) _getAttrPtr(i_attr, l_pAttrData);
     if (l_pAttrData)
     {
+        uint64_t addr_val = reinterpret_cast<uint64_t>(l_pAttrData);
+        if((addr_val & 0x1F8000000) == 0x120000000)
+        {
+            TRACFCOMP(g_trac_targeting, "Writing PNOR R/W ATTR[%08X] ptr[%p]",
+                      i_attr, l_pAttrData);
+
+#if 0
+            CONSOLE::displayf(NULL, " PNOR R/W ptr[%p] ATTR %08X written ",
+                              i_attr, l_pAttrData);
+#endif
+        }
+
         memcpy(l_pAttrData, i_pAttrData, i_size);
         if( unlikely(cv_pCallbackFuncPtr != NULL) )
         {
